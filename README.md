@@ -1,7 +1,7 @@
 # EVchargepoints
 A few scripts to monitor usage status of public EV chargepoints
 
-cyc-status - shows status of a selected ChargeYourCar chargepoint
+#### cyc-status - shows status of a selected ChargeYourCar chargepoint
 
   Usage:  
       
@@ -16,7 +16,7 @@ cyc-status - shows status of a selected ChargeYourCar chargepoint
     Status A:  Out of service
     Status B:  Available
 
-pod-status - shows status of a selected Pod-Point chargepoint
+#### pod-status - shows status of a selected Pod-Point chargepoint
 
   Usage:  
       
