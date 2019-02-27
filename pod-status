@@ -1,0 +1,27 @@
+#!/bin/bash
+# show charging status of pod-point EV charging stations
+# pod-point.com
+# usage: pod-status st-helens-retail-park-kdxd
+
+html=$(curl -s https://charge.pod-point.com/address/$1)
+name=$(grep h1 <<< $html | sed -e 's/<[^>]*>//g')
+status=$(grep fa-flash <<< $html | sed -e 's/<[^>]*>//g' | tr -d " ")
+
+readarray -t port <<< "$status"
+
+porta=${port[0]}
+portb=${port[1]}
+
+echo $name 
+echo
+echo "Status A:  $porta"
+echo "Status B:  $portb"
+echo
+
+if [ "$porta" = "Charging" ]; then
+                echo $(date +"%T"),$name,$1,"A","In use" >>chargetimes
+fi
+if [ "$portb" = "Charging" ]; then
+                echo $(date +"%T"),$name,$1,"B","In use" >>chargetimes
+fi
+

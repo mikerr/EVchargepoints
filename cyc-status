@@ -1,0 +1,15 @@
+#!/bin/bash
+# show charging status of cyc EV charging stations
+# chargeyourcar.org.uk
+# usage: cyc-status 70808
+
+html=$(curl -s https://m.chargeyourcar.org.uk/chargePoint?bayNo=$1)
+name=$(grep -m1 "<br />" <<< $html | tr -d "\t" | cut -d "<" -f1)
+status=$(grep "connectorStatusArray\\[connectorIndex\\] =" <<< $html | cut -d\'   -f2)
+
+readarray -t port <<< "$status"
+
+echo $name 
+echo
+echo "Status A:  ${port[0]}"
+echo "Status B:  ${port[1]}"
