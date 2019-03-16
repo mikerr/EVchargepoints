@@ -36,7 +36,7 @@ gnuplot.config    simple timeline graph
 
     gnuplot < gnuplot.config > usage.png
     
-![](https://i.imgur.com/AcJe8gV.png)
+![](https://i.imgur.com/zsDuboD.png)
 
 ![](https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/52793050_10157265708122112_3410643824790208512_n.jpg?_nc_cat=110&_nc_ht=scontent-lhr3-1.xx&oh=5584488b423b92515a9030c29f449b36&oe=5D1B2007)
 
