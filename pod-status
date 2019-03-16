@@ -3,7 +3,7 @@
 # pod-point.com
 # usage: pod-status st-helens-retail-park-kdxd
 
-html=$(curl -s https://charge.pod-point.com/address/$1)
+html=$(curl -sk https://charge.pod-point.com/address/$1)
 name=$(grep h1 <<< $html | sed -e 's/<[^>]*>//g')
 status=$(grep fa-flash <<< $html | sed -e 's/<[^>]*>//g' | tr -d " ")
 
