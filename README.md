@@ -33,6 +33,7 @@ A few scripts to monitor usage status of public EV chargepoints
 ![](https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/52432290_10157265707852112_4163778606570405888_n.jpg?_nc_cat=111&_nc_ht=scontent-lhr3-1.xx&oh=42a736e93a3d921114875829f2fd6a14&oe=5D17CDFC)
 
 gnuplot.config    simple timeline graph
+
     gnuplot < gnuplot.config > usage.png
     
     
