@@ -13,3 +13,10 @@ echo $name
 echo
 echo "Status A:  ${port[0]}"
 echo "Status B:  ${port[1]}"
+
+if [ "$porta" = "Charging" ]; then
+                echo $(date +"%T"),$1,"A","In use" >>chargetimes
+fi
+if [ "$portb" = "Charging" ]; then
+                echo $(date +"%T"),$1,"B","In use" >>chargetimes
+fi
