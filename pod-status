@@ -19,9 +19,9 @@ echo "Status B:  $portb"
 echo
 
 if [ "$porta" = "Charging" ]; then
-                echo $(date +"%T"),$name,$1,"A","In use" >>chargetimes
+                echo $(date +"%T"),$name,"A","In use" >>chargetimes
 fi
 if [ "$portb" = "Charging" ]; then
-                echo $(date +"%T"),$name,$1,"B","In use" >>chargetimes
+                echo $(date +"%T"),$name,"B","In use" >>chargetimes
 fi
 
