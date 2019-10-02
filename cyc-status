@@ -9,7 +9,7 @@ status=$(grep "connectorStatusArray\\[connectorIndex\\] =" <<< $html | cut -d\' 
 
 readarray -t port <<< "$status"
 
-echo $name 
+echo $name
 echo
 echo "Status A:  ${port[0]}"
 echo "Status B:  ${port[1]}"
