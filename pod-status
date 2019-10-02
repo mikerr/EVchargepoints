@@ -12,16 +12,18 @@ readarray -t port <<< "$status"
 porta=${port[0]}
 portb=${port[1]}
 
-echo $name 
+echo $name
 echo
 echo "Status A:  $porta"
 echo "Status B:  $portb"
 echo
 
 if [ "$porta" = "Charging" ]; then
-                echo $(date +"%T"),$name,"A","In use" >>chargetimes
+                echo $(date +"%T"),70800,"A","In use" >>chargetimes
 fi
 if [ "$portb" = "Charging" ]; then
-                echo $(date +"%T"),$name,"B","In use" >>chargetimes
+                echo $(date +"%T"),70800,"B","In use" >>chargetimes
 fi
+
+
 
